@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commissions — Helen Makes Things</title>
+<meta name="description" content="Commission a custom piece from Helen Makes Things.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Titan+One&family=Instrument+Serif:ital@1&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="commissions">
+<div id="site-header"></div>
+<main>
+<div class="page-title"><div class="wrap">
+  <span class="banner" id="comm-status"></span>
+  <h1 style="margin-top:18px">Commissions</h1>
+  <p>Got an idea for a painting, a pot, a portrait of your dog? Tell me about it and I'll reply with a quote and timeline.</p>
+</div></div>
+<section class="block"><div class="wrap two">
+  <div>
+    <ol class="steps">
+      <li><div><h3>Send the idea</h3><p>Fill in the form. Rough is fine; reference photos help.</p></div></li>
+      <li><div><h3>Quote and sketch</h3><p>I reply with a price, a timeline and a rough sketch or plan.</p></div></li>
+      <li><div><h3>Deposit</h3><p>A 50% deposit books your spot. The rest is due when it's finished.</p></div></li>
+      <li><div><h3>Made and shipped</h3><p>I send progress photos along the way, then pack it up and ship it.</p></div></li>
+    </ol>
+  </div>
+  <div class="panel">
+    <form id="comm-form">
+      <label>Your name <input name="name" required autocomplete="name"></label>
+      <label>What kind of piece?
+        <select name="type"><option>Painting / drawing</option><option>Illustration / digital</option><option>Ceramics</option><option>Photography</option><option>Something else</option></select>
+      </label>
+      <label>Budget
+        <select name="budget"><option>Under $100</option><option>$100 to $300</option><option>$300 to $600</option><option>$600+</option><option>Not sure yet</option></select>
+      </label>
+      <label>Needed by (optional) <input name="deadline" type="date"></label>
+      <label>Tell me about it <textarea name="idea" rows="5" required></textarea></label>
+      <button class="btn" type="submit">Send request</button>
+      <p class="note" style="font-size:14px;color:var(--mute);margin:0">This opens your email app with the request filled in.</p>
+    </form>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="data.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
