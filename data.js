@@ -11,8 +11,8 @@ const SITE = {
   showWorkshops: false,                 // <- change to true to add Workshops to the menu
   commissionsOpen: true,
   ticker: [
-    "Now showing", "Originals", "Collage", "Commissions open",
-    "One of one", "Made by hand", "Clay & thread"
+    "Now showing", "Originals", "Commissions open",
+    "One of one", "Made by hand"
   ],
 };
 
