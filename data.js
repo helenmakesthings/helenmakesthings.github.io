@@ -136,13 +136,14 @@ const WORKS = [
 /* ------------------------------------------------------------
    ABOUT PAGE
    Anything in [square brackets] is a spot for you to fill in.
+   Type \n inside the quotes to start a new line.
    Delete a paragraph or FAQ entry to remove it from the page.
    ------------------------------------------------------------ */
 const ABOUT = {
   photo: "",          // <- e.g. "images/me.jpg" (a portrait or studio shot). Blank shows a "no signal" screen.
   photoCaption: "Live from the studio",
   bio: [
-    "Hi, I'm Helen. Made by me, a ho of all hobbies.",
+    "Hi, I'm Helen.\nAll things made by me, a ho of all hobbies.",
     "I'm attempting to craft my way through all the hobbies. It usually starts with \"how hard can it be?\" and ends with a table covered in paper scraps, clay dust and tangled thread. Every new craft means new mistakes, new tricks and something weird and wonderful at the end.",
     "What you see here is the stuff that turned out well: torn-paper collages, little acrylic paintings, embroidery, wall hangings and a growing shelf of mugs and dishes. I love bright color, small scale, and the slightly wobbly charm of things made by hand. Nearly everything here is one of one. Once it's gone, it's gone.",
     "Currently based in Austin, TX; I have had a penchant for crafting and meddling since childhood. Follow along on Instagram to see what I'm trying next.",

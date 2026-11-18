@@ -151,7 +151,7 @@
 
   /* ---------- about ---------- */
   if (page === "about" && typeof ABOUT !== "undefined") {
-    const fill = (s) => esc(s).replace(/\[([^\]]+)\]/g, '<mark class="todo">[$1]</mark>');
+    const fill = (s) => esc(s).replace(/\[([^\]]+)\]/g, '<mark class="todo">[$1]</mark>').replace(/\n/g, "<br>");
     document.getElementById("about-photo").innerHTML = `
       <figure class="tv-photo">
         <div class="screen">${ABOUT.photo ? `<img src="${esc(ABOUT.photo)}" alt="${esc(SITE.name)}">` : `<div class="no-signal"><span>No signal</span><small>Photo coming soon</small></div>`}</div>
