@@ -182,6 +182,11 @@
         <p class="meta" style="font-family:var(--tv);font-size:22px;color:var(--yellow);margin:8px 0">${esc(w.date)} · ${esc(w.place)} · ${esc(w.length)} · ${esc(w.spots)}</p>
         <p>${esc(w.blurb)}</p>
         <a class="btn" ${w.link ? `href="${esc(w.link)}" target="_blank" rel="noopener"` : `href="${inquiry("Workshop: " + w.title)}"`}>Book a spot <span class="price">${money(w.price)}</span></a>
-      </div>`).join("") || `<p class="empty">No workshops scheduled yet.</p>`;
+      </div>`).join("") || `
+      <div class="coming-soon">
+        <div class="osd"><span class="rec">PLEASE STAND BY</span></div>
+        <h2>Coming Soon</h2>
+        ${SITE.instagram ? `<p>Follow along on <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">Instagram</a> to hear first when workshops open.</p>` : ""}
+      </div>`;
   }
 })();

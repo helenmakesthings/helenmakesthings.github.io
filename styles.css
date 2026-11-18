@@ -319,3 +319,12 @@ mark.todo { background: var(--yellow); color: var(--ink); padding: 0 4px; border
 footer .wrap > span:last-child { display: inline-flex; align-items: center; gap: 14px; }
 footer .ig { display: inline-flex; color: var(--yellow); transition: color .15s, transform .15s; }
 footer .ig:hover { color: var(--pink); transform: rotate(-8deg) scale(1.1); }
+
+/* ============ v5: tagline line break + workshops Coming Soon ============ */
+[data-site-tagline] { white-space: pre-line; }
+.coming-soon { grid-column: 1 / -1; text-align: center; padding: 56px 20px 64px; border: 3px solid var(--ink); border-radius: 18px; box-shadow: 8px 8px 0 var(--pink);
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 2px, transparent 2px 6px), var(--panel); }
+.coming-soon .osd { justify-content: center; margin-bottom: 14px; }
+.coming-soon h2 { font-size: clamp(54px, 12vw, 140px); color: var(--yellow); text-shadow: 4px 4px 0 var(--pink), 8px 8px 0 var(--purple), 12px 12px 0 var(--ink); }
+.coming-soon p { margin: 26px auto 0; max-width: 46ch; font-size: 19px; }
+.coming-soon a { color: var(--yellow); }

@@ -5,10 +5,10 @@
 
 const SITE = {
   name: "Helen Makes Things",
-  tagline: "Collage, paint, clay, thread & one-offs. Made by hand, broadcast from the studio.",
+  tagline: "Collage, paint, clay, thread & one-offs.\nMade by hand, broadcast from the studio.",
   email: "hello@helenmakesthings.com", // <- your contact email (used by Inquire + Commissions)
   instagram: "https://www.instagram.com/helenmakesthings/", // <- full link, e.g. "https://instagram.com/yourname" (blank hides it)
-  showWorkshops: false,                 // <- change to true to add Workshops to the menu
+  showWorkshops: true,                  // <- false hides Workshops from the menu
   commissionsOpen: true,
   ticker: [
     "Now showing", "Originals", "Commissions open",
@@ -168,15 +168,16 @@ const ABOUT = {
 };
 
 /* ------------------------------------------------------------
-   WORKSHOPS — only shown when SITE.showWorkshops is true.
-   Paste a Stripe Payment Link into "link" to take bookings.
+   WORKSHOPS — while this list is empty, the page says "Coming Soon".
+   To list a workshop, add one between the [ ] like this example:
+   {
+     title: "Intro to Linocut", date: "Sat, Jan 17, 2027",
+     place: "Austin, TX", length: "3 hours", price: 65, spots: "8 spots",
+     link: "",   // <- paste a Stripe Payment Link to take bookings
+     blurb: "What people will make and what's included.",
+   },
    ------------------------------------------------------------ */
 const WORKSHOPS = [
-  {
-    title: "Sample: Intro to Linocut", date: "Date to be announced",
-    place: "Location", length: "3 hours", price: 65, spots: "8 spots", link: "",
-    blurb: "Sample workshop. Describe what people will make and what's included.",
-  },
 ];
 
 const CURRENCY = "$";
