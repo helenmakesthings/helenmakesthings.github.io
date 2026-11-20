@@ -80,7 +80,7 @@
   function cardHTML(w) {
     return `<button class="card" data-id="${esc(w.id)}">${artHTML(w, cover(w), true)}
       <div class="card-body"><h3>${esc(w.title)}</h3>
-      <div class="meta">${esc(w.details)}${yr(w)}</div>${priceLine(w)}</div></button>`;
+      <div class="meta">${esc(w.details)}${w.size ? `<br><span class="size">${esc(w.size)}</span>` : ""}${yr(w)}</div>${priceLine(w)}</div></button>`;
   }
 
   /* ---------- detail dialog ---------- */
@@ -111,7 +111,7 @@
     dlg.innerHTML = `<button class="close" aria-label="Close">✕</button>
       <div class="detail"><div class="viewer">${artHTML(w)}${thumbs}</div>
         <div class="detail-body"><h2>${esc(w.title)}</h2>
-          <div class="meta">${esc(w.details)}${w.year ? `<br>${esc(w.year)}` : ""}</div>
+          <div class="meta">${esc(w.details)}${w.size ? `<br><span class="size">Size: ${esc(w.size)}</span>` : ""}${w.year ? `<br>${esc(w.year)}` : ""}</div>
           <p>${esc(w.blurb)}</p>${actions}</div></div>`;
     dlg.showModal();
   }

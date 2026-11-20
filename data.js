@@ -27,7 +27,8 @@ const SITE = {
             A cover ending in -cut.webp is a cut-out (no background) and gets a clean backdrop on the site.
             For the neatest cards, crop the cover to 4:5 (e.g. 1000 x 1250)
             with the piece centered and an even border around it.
-   details: medium and size, e.g. "Paper collage on wood · 4 × 4 in"
+   details: medium and materials, e.g. "Paper collage on wood block"
+   size:    dimensions, e.g. "4 × 4 × 1 in" (width × height × depth). Blank hides it.
    year:    leave "" to hide it
    buy:     price: a number like 120, or null to show "Ask about this piece"
             link:  paste a Stripe Payment Link. Blank = email inquiry.
@@ -36,6 +37,7 @@ const WORKS = [
   {
     id: "manatee", title: "Manatee & Calf", medium: "collage", year: "",
     details: "Paper collage on wood block · stands or hangs", status: "original",
+    size: "4 × 4 × ⅜ in",
     images: ["images/manatee-cut.webp", "images/manatee-2.jpg"],
     blurb: "A manatee and her calf drift through a torn-paper sea, with seagrass growing up from the edges. Mounted on a small wooden block that can stand on a shelf or hang on the wall.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -43,6 +45,7 @@ const WORKS = [
   {
     id: "garden-in-bloom", title: "Garden in Bloom", medium: "collage", year: "",
     details: "Paper collage on wood block · stands or hangs", status: "original",
+    size: "4 × 4 × ⅜ in",
     images: ["images/garden-in-bloom-cut.webp", "images/garden-in-bloom-2.jpg"],
     blurb: "A dense little garden of cut-paper flowers in pink, red, blue and white, layered over mossy greens. Mounted on a wooden block that can stand on a shelf or hang on the wall.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -50,6 +53,7 @@ const WORKS = [
   {
     id: "tide-pool", title: "Tide Pool", medium: "collage", year: "",
     details: "Paper collage on wood block · stands or hangs", status: "original",
+    size: "4 × 4 × ⅜ in",
     images: ["images/tide-pool-cut.webp", "images/tide-pool-2.jpg"],
     blurb: "Turquoise creatures, like something under a microscope, scattered across a rocky shoreline of silver and blue paper. Mounted on a wooden block that can stand on a shelf or hang on the wall.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -57,6 +61,7 @@ const WORKS = [
   {
     id: "lantern-bearer", title: "The Lantern Bearer", medium: "painting", year: "",
     details: "Acrylic on canvas panel", status: "original",
+    size: "7 × 5 in",
     images: ["images/lantern-bearer-cut.webp", "images/lantern-bearer-2.jpg"],
     blurb: "A hooded figure carries a lantern through deep blue night, its glow spilling yellow and pink across the ground.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -64,6 +69,7 @@ const WORKS = [
   {
     id: "meadow", title: "Meadow Under Cumulus", medium: "painting", year: "",
     details: "Acrylic on canvas panel", status: "original",
+    size: "7 × 5 in",
     images: ["images/meadow-cut.webp", "images/meadow-2.jpg"],
     blurb: "Green hills under a big lilac cloud, with a field of pink and blue wildflowers in the foreground.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -71,6 +77,7 @@ const WORKS = [
   {
     id: "blue-pups", title: "Awoooo: Blue Pup Studies", medium: "illustration", year: "",
     details: "Ink and watercolor on paper", status: "original",
+    size: "7 × 5 in",
     images: ["images/blue-pups-cut.webp", "images/blue-pups-2.jpg"],
     blurb: "A page of fluffy blue pups sleeping, trotting, sniffing and howling. One sketchbook-style original.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -78,6 +85,7 @@ const WORKS = [
   {
     id: "wildflower-crescent", title: "Wildflower Crescent", medium: "textile", year: "",
     details: "Hand embroidery in wooden hoop", status: "original",
+    size: "6 in hoop",
     images: ["images/wildflower-crescent-cut.webp", "images/wildflower-crescent-2.jpg"],
     blurb: "A crescent of hand-stitched flowers, wheat and leaves in coral, blush, sage and moss, worked in long-and-short stitch. Comes ready to hang in its hoop.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -85,6 +93,7 @@ const WORKS = [
   {
     id: "rainbow-hanging", title: "Soft Rainbow Wall Hanging", medium: "textile", year: "",
     details: "Yarn-wrapped cord with cotton fringe", status: "original",
+    size: "12.5 × 17.5 × 1 in",
     images: ["images/rainbow-hanging-cut.webp", "images/rainbow-hanging-2.jpg", "images/rainbow-hanging-3.jpg"],
     blurb: "Six bands of blush, ochre, cream and gray, wrapped by hand and finished with fluffy cotton fringe. Perfect for a nursery.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -92,6 +101,7 @@ const WORKS = [
   {
     id: "bunny-cross-stitch", title: "Bunny Cross-Stitch", medium: "textile", year: "",
     details: "Cross-stitch in wooden hoop", status: "archive",
+    size: "6 in hoop",
     // Portfolio only: this is a well-known trademarked character, so it isn't safe to sell.
     images: ["images/bunny-cross-stitch-cut.webp", "images/bunny-cross-stitch-2.jpg"],
     blurb: "A favorite bunny in a blue dress, stitched for fun. Not for sale, but I take commissions for original cross-stitch designs.",
@@ -100,6 +110,7 @@ const WORKS = [
   {
     id: "palette-and-cup", title: "Painter's Palette & Brush Cup", medium: "ceramics", year: "",
     details: "Handbuilt stoneware · palette with matching water cup", status: "original",
+    size: "7 × 5 × 2.5 in",
     images: ["images/palette-and-cup-1.jpg", "images/palette-and-cup-2.jpg", "images/palette-and-cup-3.jpg"],
     blurb: "A wobbly-edged mixing palette with nine wells and a cup that sits in its own nook, glazed in creamy white with a drippy brown-speckled cup. Made for watercolor.",
     buy: [{ label: "Buy the set", price: null, link: "" }],
@@ -107,6 +118,7 @@ const WORKS = [
   {
     id: "diamond-dishes", title: "Diamond Trinket Dishes (pair)", medium: "ceramics", year: "",
     details: "Handbuilt ceramic · set of two", status: "original",
+    size: "4 × 2 × ½ in (each)",
     images: ["images/diamond-dishes-cut.webp", "images/diamond-dishes-2.jpg", "images/diamond-dishes-3.jpg"],
     blurb: "Two little diamond dishes, half white and half shimmering gold-ochre. Just right for rings and earrings.",
     buy: [{ label: "Buy the pair", price: null, link: "" }],
@@ -114,6 +126,7 @@ const WORKS = [
   {
     id: "bud-vase", title: "Sea Glass Bud Vase", medium: "ceramics", year: "",
     details: "Wheel-thrown stoneware", status: "original",
+    size: "2¼ × 2¼ × 3 in · about 1 in opening",
     images: ["images/bud-vase-1.jpg"],
     blurb: "A small bud vase in soft sea-green and lilac glaze. Big enough for a single stem.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -121,6 +134,7 @@ const WORKS = [
   {
     id: "storm-mug", title: "Storm Mug", medium: "ceramics", year: "",
     details: "Wheel-thrown stoneware", status: "original",
+    size: "3½ in tall · holds 8 oz",
     images: ["images/storm-mug-1.jpg"],
     blurb: "A round-bellied mug dipped in pale gray over matte black, with a diagonal line where the glazes meet.",
     buy: [{ label: "Buy original", price: null, link: "" }],
@@ -128,6 +142,7 @@ const WORKS = [
   {
     id: "celadon-mug", title: "Crackle Celadon Mug", medium: "ceramics", year: "",
     details: "Wheel-thrown stoneware", status: "original",
+    size: "3½ in tall · holds 10 oz",
     images: ["images/celadon-mug-1.jpg"],
     blurb: "A warm olive-celadon mug with a fine crackle glaze that catches the light.",
     buy: [{ label: "Buy original", price: null, link: "" }],
