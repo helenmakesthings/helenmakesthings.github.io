@@ -24,6 +24,7 @@ const SITE = {
             "sold"      shown in the portfolio with a SOLD tag
             "archive"   portfolio only, not for sale
    images:  photos in the images folder. The first one is the cover.
+            A cover ending in -cut.webp is a cut-out (no background) and gets a clean backdrop on the site.
             For the neatest cards, crop the cover to 4:5 (e.g. 1000 x 1250)
             with the piece centered and an even border around it.
    details: medium and size, e.g. "Paper collage on wood · 4 × 4 in"
@@ -35,56 +36,56 @@ const WORKS = [
   {
     id: "manatee", title: "Manatee & Calf", medium: "collage", year: "",
     details: "Paper collage on wood block · stands or hangs", status: "original",
-    images: ["images/manatee-1.jpg", "images/manatee-2.jpg"],
+    images: ["images/manatee-cut.webp", "images/manatee-2.jpg"],
     blurb: "A manatee and her calf drift through a torn-paper sea, with seagrass growing up from the edges. Mounted on a small wooden block that can stand on a shelf or hang on the wall.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "garden-in-bloom", title: "Garden in Bloom", medium: "collage", year: "",
     details: "Paper collage on wood block · stands or hangs", status: "original",
-    images: ["images/garden-in-bloom-1.jpg", "images/garden-in-bloom-2.jpg"],
+    images: ["images/garden-in-bloom-cut.webp", "images/garden-in-bloom-2.jpg"],
     blurb: "A dense little garden of cut-paper flowers in pink, red, blue and white, layered over mossy greens. Mounted on a wooden block that can stand on a shelf or hang on the wall.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "tide-pool", title: "Tide Pool", medium: "collage", year: "",
     details: "Paper collage on wood block · stands or hangs", status: "original",
-    images: ["images/tide-pool-1.jpg", "images/tide-pool-2.jpg"],
+    images: ["images/tide-pool-cut.webp", "images/tide-pool-2.jpg"],
     blurb: "Turquoise creatures, like something under a microscope, scattered across a rocky shoreline of silver and blue paper. Mounted on a wooden block that can stand on a shelf or hang on the wall.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "lantern-bearer", title: "The Lantern Bearer", medium: "painting", year: "",
     details: "Acrylic on canvas panel", status: "original",
-    images: ["images/lantern-bearer-1.jpg", "images/lantern-bearer-2.jpg"],
+    images: ["images/lantern-bearer-cut.webp", "images/lantern-bearer-2.jpg"],
     blurb: "A hooded figure carries a lantern through deep blue night, its glow spilling yellow and pink across the ground.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "meadow", title: "Meadow Under Cumulus", medium: "painting", year: "",
     details: "Acrylic on canvas panel", status: "original",
-    images: ["images/meadow-1.jpg", "images/meadow-2.jpg"],
+    images: ["images/meadow-cut.webp", "images/meadow-2.jpg"],
     blurb: "Green hills under a big lilac cloud, with a field of pink and blue wildflowers in the foreground.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "blue-pups", title: "Awoooo: Blue Pup Studies", medium: "illustration", year: "",
     details: "Ink and watercolor on paper", status: "original",
-    images: ["images/blue-pups-1.jpg", "images/blue-pups-2.jpg"],
+    images: ["images/blue-pups-cut.webp", "images/blue-pups-2.jpg"],
     blurb: "A page of fluffy blue pups sleeping, trotting, sniffing and howling. One sketchbook-style original.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "wildflower-crescent", title: "Wildflower Crescent", medium: "textile", year: "",
     details: "Hand embroidery in wooden hoop", status: "original",
-    images: ["images/wildflower-crescent-1.jpg", "images/wildflower-crescent-2.jpg"],
+    images: ["images/wildflower-crescent-cut.webp", "images/wildflower-crescent-2.jpg"],
     blurb: "A crescent of hand-stitched flowers, wheat and leaves in coral, blush, sage and moss, worked in long-and-short stitch. Comes ready to hang in its hoop.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
   {
     id: "rainbow-hanging", title: "Soft Rainbow Wall Hanging", medium: "textile", year: "",
     details: "Yarn-wrapped cord with cotton fringe", status: "original",
-    images: ["images/rainbow-hanging-1.jpg", "images/rainbow-hanging-2.jpg", "images/rainbow-hanging-3.jpg"],
+    images: ["images/rainbow-hanging-cut.webp", "images/rainbow-hanging-2.jpg", "images/rainbow-hanging-3.jpg"],
     blurb: "Six bands of blush, ochre, cream and gray, wrapped by hand and finished with fluffy cotton fringe. Perfect for a nursery.",
     buy: [{ label: "Buy original", price: null, link: "" }],
   },
@@ -92,7 +93,7 @@ const WORKS = [
     id: "bunny-cross-stitch", title: "Bunny Cross-Stitch", medium: "textile", year: "",
     details: "Cross-stitch in wooden hoop", status: "archive",
     // Portfolio only: this is a well-known trademarked character, so it isn't safe to sell.
-    images: ["images/bunny-cross-stitch-1.jpg", "images/bunny-cross-stitch-2.jpg"],
+    images: ["images/bunny-cross-stitch-cut.webp", "images/bunny-cross-stitch-2.jpg"],
     blurb: "A favorite bunny in a blue dress, stitched for fun. Not for sale, but I take commissions for original cross-stitch designs.",
     buy: [],
   },
@@ -106,7 +107,7 @@ const WORKS = [
   {
     id: "diamond-dishes", title: "Diamond Trinket Dishes (pair)", medium: "ceramics", year: "",
     details: "Handbuilt ceramic · set of two", status: "original",
-    images: ["images/diamond-dishes-1.jpg", "images/diamond-dishes-2.jpg", "images/diamond-dishes-3.jpg"],
+    images: ["images/diamond-dishes-cut.webp", "images/diamond-dishes-2.jpg", "images/diamond-dishes-3.jpg"],
     blurb: "Two little diamond dishes, half white and half shimmering gold-ochre. Just right for rings and earrings.",
     buy: [{ label: "Buy the pair", price: null, link: "" }],
   },
