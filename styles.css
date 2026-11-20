@@ -644,3 +644,11 @@ footer .ig:hover { color: var(--pink); transform: rotate(-8deg) scale(1.1); }
 .guide-now img.is-cut { object-fit: contain; padding: 10px; background: radial-gradient(110% 85% at 50% 40%, #3446d6, #1b2fa8 70%); filter: drop-shadow(0 8px 10px rgba(0,0,20,.5)); }
 dialog .art.is-cut img { padding: 6%; }
 .card .art.is-cut img { padding: 0; }
+
+/* ---------- v14: quieter availability filter ---------- */
+.shop-avail { gap: 6px; margin-top: 10px; }
+.shop-avail::before { font-size: 17px; margin-right: 2px; }
+.shop-avail .chip, .shop-avail .av-all, .shop-avail .av-available, .shop-avail .av-unavailable { --c: var(--mute); color: var(--mute); font-size: 16px; padding: 4px 11px; border-width: 1.5px; }
+.shop-avail .chip:hover { background: transparent; color: var(--paper); border-color: var(--paper); }
+.shop-avail .chip[aria-current] { background: var(--mute); color: var(--ink); box-shadow: none; }
+.tv-hint .tap { display: block; margin-top: 2px; }
