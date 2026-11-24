@@ -652,3 +652,13 @@ dialog .art.is-cut img { padding: 6%; }
 .shop-avail .chip:hover { background: transparent; color: var(--paper); border-color: var(--paper); }
 .shop-avail .chip[aria-current] { background: var(--mute); color: var(--ink); box-shadow: none; }
 .tv-hint .tap { display: block; margin-top: 2px; }
+
+/* ---------- v15: piece pages ---------- */
+.piece-page { padding-top: 28px; }
+.crumb { font-family: var(--tv); font-size: 20px; color: var(--mute); margin: 0 0 14px; }
+.crumb a { color: var(--yellow); text-decoration: none; } .crumb a:hover { text-decoration: underline; }
+.piece { border: 3px solid var(--yellow); border-radius: 12px; overflow: hidden; background: var(--panel); box-shadow: 10px 10px 0 var(--blue); padding: 0; }
+.piece > h1, .piece > p { padding: 0 26px; }
+.piece .detail-body h1 { font-size: clamp(30px, 5vw, 44px); margin: 0; }
+.piece .art.is-cut img { padding: 6%; }
+.piece-link a, .piece-ig a { color: var(--yellow); }

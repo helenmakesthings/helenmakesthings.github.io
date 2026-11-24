@@ -83,13 +83,11 @@
       <div class="meta">${esc(w.details)}${w.size ? `<br><span class="size">${esc(w.size)}</span>` : ""}${yr(w)}</div>${priceLine(w)}</div></button>`;
   }
 
-  /* ---------- detail dialog ---------- */
-  const dlg = document.createElement("dialog");
-  document.body.appendChild(dlg);
-  dlg.addEventListener("click", (e) => { if (e.target === dlg || e.target.closest(".close")) dlg.close(); });
+  /* ---------- piece details (popup on Shop/TV, full page on piece.html?id=...) ---------- */
+  const SITE_URL = "https://helenmakesthings.com/";
+  const pieceURL = (w) => `piece.html?id=${encodeURIComponent(w.id)}`;
   function inquiry(subject) { return `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`; }
-  function openWork(id) {
-    const w = WORKS.find((x) => x.id === id); if (!w) return;
+  function detailHTML(w, onPage = false) {
     let actions = "";
     if (forSale(w)) {
       actions = `<div class="btn-row">` + w.buy.map((b) => {
@@ -108,20 +106,60 @@
     const thumbs = imgs.length > 1
       ? `<div class="thumbs">${imgs.map((s, i) => `<button data-src="${esc(s)}" aria-label="Photo ${i + 1}" aria-pressed="${i === 0}"><img src="${esc(s)}" alt=""></button>`).join("")}</div>`
       : "";
-    dlg.innerHTML = `<button class="close" aria-label="Close">✕</button>
-      <div class="detail"><div class="viewer">${artHTML(w)}${thumbs}</div>
-        <div class="detail-body"><h2>${esc(w.title)}</h2>
+    const more = onPage
+      ? (SITE.instagram ? `<p class="note piece-ig">See what I'm making next on <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">Instagram @helenmakesthings</a>.</p>` : "")
+      : `<p class="note piece-link"><a href="${pieceURL(w)}">Link to this piece</a></p>`;
+    const H = onPage ? "h1" : "h2";
+    return `<div class="detail"><div class="viewer">${artHTML(w)}${thumbs}</div>
+        <div class="detail-body"><${H}>${esc(w.title)}</${H}>
           <div class="meta">${esc(w.details)}${w.size ? `<br><span class="size">Size: ${esc(w.size)}</span>` : ""}${w.year ? `<br>${esc(w.year)}` : ""}</div>
-          <p>${esc(w.blurb)}</p>${actions}</div></div>`;
+          <p>${esc(w.blurb)}</p>${actions}${more}</div></div>`;
+  }
+  const dlg = document.createElement("dialog");
+  document.body.appendChild(dlg);
+  dlg.addEventListener("click", (e) => { if (e.target === dlg || e.target.closest(".close")) dlg.close(); });
+  function openWork(id) {
+    const w = WORKS.find((x) => x.id === id); if (!w) return;
+    dlg.innerHTML = `<button class="close" aria-label="Close">✕</button>${detailHTML(w)}`;
     dlg.showModal();
   }
-  dlg.addEventListener("click", (e) => {
+  document.addEventListener("click", (e) => {
     const t = e.target.closest(".thumbs button"); if (!t) return;
-    dlg.querySelector(".viewer .art img").src = t.dataset.src;
-    dlg.querySelector(".viewer .art").classList.toggle("is-cut", isCut(t.dataset.src));
-    dlg.querySelectorAll(".thumbs button").forEach((b) => b.setAttribute("aria-pressed", b === t));
+    const d = t.closest(".detail");
+    d.querySelector(".viewer .art img").src = t.dataset.src;
+    d.querySelector(".viewer .art").classList.toggle("is-cut", isCut(t.dataset.src));
+    d.querySelectorAll(".thumbs button").forEach((b) => b.setAttribute("aria-pressed", b === t));
   });
   document.addEventListener("click", (e) => { const c = e.target.closest(".card[data-id]"); if (c) openWork(c.dataset.id); });
+
+  /* ---------- piece page: one page per piece, so search engines can list each one ---------- */
+  if (page === "piece") {
+    const id = new URLSearchParams(location.search).get("id");
+    const w = WORKS.find((x) => x.id === id);
+    const box = document.getElementById("piece");
+    if (!w) {
+      box.innerHTML = `<h1>Off the air</h1><p>That piece isn't here anymore. <a href="shop.html">See everything in the Shop</a>.</p>`;
+    } else {
+      const cat = (MEDIUMS.find(([k]) => k === w.medium) || [, ""])[1];
+      document.title = `${w.title} · ${cat} by ${SITE.name}`;
+      const desc = `${w.blurb} ${w.details}${w.size ? `, ${w.size}` : ""}. Handmade in Austin, TX.`;
+      const setMeta = (sel, attr, val) => { const m = document.querySelector(sel); if (m) m.setAttribute(attr, val); };
+      setMeta('meta[name="description"]', "content", desc);
+      setMeta('link[rel="canonical"]', "href", SITE_URL + pieceURL(w));
+      document.getElementById("piece-crumb").innerHTML = `<a href="shop.html">Shop</a> / <a href="shop.html#ch-${esc(w.medium)}">${esc(cat)}</a>`;
+      box.innerHTML = detailHTML(w, true);
+      const ld = {
+        "@context": "https://schema.org", "@type": forSale(w) ? "Product" : "VisualArtwork",
+        name: w.title, description: w.blurb, image: (w.images || []).map((s) => SITE_URL + s),
+        url: SITE_URL + pieceURL(w), brand: { "@type": "Brand", name: SITE.name },
+      };
+      const priced = (w.buy || []).filter(hasPrice);
+      if (forSale(w) && priced.length) ld.offers = { "@type": "Offer", price: priced[0].price, priceCurrency: "USD", availability: "https://schema.org/InStock", url: SITE_URL + pieceURL(w) };
+      if (forSale(w) && !priced.length) ld["@type"] = "VisualArtwork";
+      const sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(ld);
+      document.head.appendChild(sc);
+    }
+  }
 
   /* ---------- home: 90s TV + TV guide ----------
      Each CHANNEL is a category (same numbers as the Portfolio page: CH 02 Collage, CH 03 Painting...).
