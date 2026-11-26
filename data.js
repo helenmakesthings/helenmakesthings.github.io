@@ -40,7 +40,7 @@ const WORKS = [
     size: "4 × 4 × ⅜ in",
     images: ["images/manatee-cut.webp", "images/manatee-2.jpg"],
     blurb: "A manatee and her calf drift through a torn-paper sea, with seagrass growing up from the edges. Mounted on a small wooden block that can stand on a shelf or hang on the wall.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 35, link: "https://buy.stripe.com/aFa4grfIMcyD4QG5Ef3sI00" }],
   },
   {
     id: "garden-in-bloom", title: "Garden in Bloom", medium: "collage", year: "",
@@ -48,7 +48,7 @@ const WORKS = [
     size: "4 × 4 × ⅜ in",
     images: ["images/garden-in-bloom-cut.webp", "images/garden-in-bloom-2.jpg"],
     blurb: "A dense little garden of cut-paper flowers in pink, red, blue and white, layered over mossy greens. Mounted on a wooden block that can stand on a shelf or hang on the wall.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 35, link: "https://buy.stripe.com/5kQ4greEI2Y3dnc9Uv3sI01" }],
   },
   {
     id: "tide-pool", title: "Tide Pool", medium: "collage", year: "",
@@ -56,7 +56,7 @@ const WORKS = [
     size: "4 × 4 × ⅜ in",
     images: ["images/tide-pool-cut.webp", "images/tide-pool-2.jpg"],
     blurb: "Turquoise creatures, like something under a microscope, scattered across a rocky shoreline of silver and blue paper. Mounted on a wooden block that can stand on a shelf or hang on the wall.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 35, link: "https://buy.stripe.com/14AeV5548eGLergeaL3sI02" }],
   },
   {
     id: "lantern-bearer", title: "The Lantern Bearer", medium: "painting", year: "",
@@ -64,7 +64,7 @@ const WORKS = [
     size: "7 × 5 in",
     images: ["images/lantern-bearer-cut.webp", "images/lantern-bearer-2.jpg"],
     blurb: "A hooded figure carries a lantern through deep blue night, its glow spilling yellow and pink across the ground.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 45, link: "https://buy.stripe.com/6oUfZ9fIM7ej5UKeaL3sI03" }],
   },
   {
     id: "meadow", title: "Meadow Under Cumulus", medium: "painting", year: "",
@@ -72,7 +72,7 @@ const WORKS = [
     size: "7 × 5 in",
     images: ["images/meadow-cut.webp", "images/meadow-2.jpg"],
     blurb: "Green hills under a big lilac cloud, with a field of pink and blue wildflowers in the foreground.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 45, link: "https://buy.stripe.com/9B6bITeEI8in5UK5Ef3sI04" }],
   },
   {
     id: "blue-pups", title: "Awoooo: Blue Pup Studies", medium: "illustration", year: "",
@@ -80,7 +80,7 @@ const WORKS = [
     size: "7 × 5 in",
     images: ["images/blue-pups-cut.webp", "images/blue-pups-2.jpg"],
     blurb: "A page of fluffy blue pups sleeping, trotting, sniffing and howling. One sketchbook-style original.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 45, link: "https://buy.stripe.com/28E6oz68cgOTergd6H3sI05" }],
   },
   {
     id: "wildflower-crescent", title: "Wildflower Crescent", medium: "textile", year: "",
@@ -88,7 +88,7 @@ const WORKS = [
     size: "6 in hoop",
     images: ["images/wildflower-crescent-cut.webp", "images/wildflower-crescent-2.jpg"],
     blurb: "A crescent of hand-stitched flowers, wheat and leaves in coral, blush, sage and moss, worked in long-and-short stitch. Comes ready to hang in its hoop.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 65, link: "https://buy.stripe.com/14A6ozcwA0PV5UKd6H3sI06" }],
   },
   {
     id: "rainbow-hanging", title: "Soft Rainbow Wall Hanging", medium: "textile", year: "",
@@ -96,7 +96,7 @@ const WORKS = [
     size: "12.5 × 17.5 × 1 in",
     images: ["images/rainbow-hanging-cut.webp", "images/rainbow-hanging-2.jpg", "images/rainbow-hanging-3.jpg"],
     blurb: "Six bands of blush, ochre, cream and gray, wrapped by hand and finished with fluffy cotton fringe. Perfect for a nursery.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 115, link: "https://buy.stripe.com/4gMaEP404cyD3MC6Ij3sI07" }],
   },
   {
     id: "bunny-cross-stitch", title: "Bunny Cross-Stitch", medium: "textile", year: "",
@@ -113,7 +113,7 @@ const WORKS = [
     size: "7 × 5 × 2.5 in",
     images: ["images/palette-and-cup-1.jpg", "images/palette-and-cup-2.jpg", "images/palette-and-cup-3.jpg"],
     blurb: "A wobbly-edged mixing palette with nine wells and a cup that sits in its own nook, glazed in creamy white with a drippy brown-speckled cup. Made for watercolor.",
-    buy: [{ label: "Buy the set", price: null, link: "" }],
+    buy: [{ label: "Buy the set", price: 85, link: "https://buy.stripe.com/6oU28j404gOTdnc3w73sI08" }],
   },
   {
     id: "diamond-dishes", title: "Diamond Trinket Dishes (pair)", medium: "ceramics", year: "",
@@ -121,7 +121,7 @@ const WORKS = [
     size: "4 × 2 × ½ in (each)",
     images: ["images/diamond-dishes-cut.webp", "images/diamond-dishes-2.jpg", "images/diamond-dishes-3.jpg"],
     blurb: "Two little diamond dishes, half white and half shimmering gold-ochre. Just right for rings and earrings.",
-    buy: [{ label: "Buy the pair", price: null, link: "" }],
+    buy: [{ label: "Buy the pair", price: 35, link: "https://buy.stripe.com/3cI5kvfIMgOTergeaL3sI09" }],
   },
   {
     id: "bud-vase", title: "Sea Glass Bud Vase", medium: "ceramics", year: "",
@@ -129,7 +129,7 @@ const WORKS = [
     size: "2¼ × 2¼ × 3 in · about 1 in opening",
     images: ["images/bud-vase-1.jpg"],
     blurb: "A small bud vase in soft sea-green and lilac glaze. Big enough for a single stem.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 50, link: "https://buy.stripe.com/aFa3cn1RWaqv5UK6Ij3sI0a" }],
   },
   {
     id: "storm-mug", title: "Storm Mug", medium: "ceramics", year: "",
@@ -137,7 +137,7 @@ const WORKS = [
     size: "3½ in tall · holds 8 oz",
     images: ["images/storm-mug-1.jpg"],
     blurb: "A round-bellied mug dipped in pale gray over matte black, with a diagonal line where the glazes meet.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 55, link: "https://buy.stripe.com/3cI8wHcwA7ejdnc1nZ3sI0b" }],
   },
   {
     id: "celadon-mug", title: "Crackle Celadon Mug", medium: "ceramics", year: "",
@@ -145,7 +145,7 @@ const WORKS = [
     size: "3½ in tall · holds 10 oz",
     images: ["images/celadon-mug-1.jpg"],
     blurb: "A warm olive-celadon mug with a fine crackle glaze that catches the light.",
-    buy: [{ label: "Buy original", price: null, link: "" }],
+    buy: [{ label: "Buy original", price: 55, link: "https://buy.stripe.com/00w3cneEIeGLgzo6Ij3sI0c" }],
   },
 ];
 
