@@ -107,7 +107,7 @@
       ? `<div class="thumbs">${imgs.map((s, i) => `<button data-src="${esc(s)}" aria-label="Photo ${i + 1}" aria-pressed="${i === 0}"><img src="${esc(s)}" alt=""></button>`).join("")}</div>`
       : "";
     const more = onPage
-      ? (SITE.instagram ? `<p class="note piece-ig">See what I'm making next on <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">Instagram @helenmakesthings</a>.</p>` : "")
+      ? (SITE.instagram ? `<p class="note piece-ig">See what I'm making next on Instagram <a href="${esc(SITE.instagram)}" target="_blank" rel="noopener">@helenmakesthings</a>.</p>` : "")
       : `<p class="note piece-link"><a href="${pieceURL(w)}">Link to this piece</a></p>`;
     const H = onPage ? "h1" : "h2";
     return `<div class="detail"><div class="viewer">${artHTML(w)}${thumbs}</div>
